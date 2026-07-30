@@ -2,9 +2,14 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Download, Lightbulb, Search, Target, FileText } from 'lucide-react'
+import { Lightbulb, Search, Target, FileText } from 'lucide-react'
 
 const workshops = [
+  {
+    icon: Lightbulb,
+    title: "On the Same Page: Parent-Teacher Partnership That Works",
+    description: "Parents and teachers share the same goal but don't always share the same playbook. This session offers concrete strategies for building a true partnership — one where communication flows easily and the child feels the difference.",
+  },
   {
     icon: Lightbulb,
     title: "Unlocking True Potential: Empowering Kids",
@@ -25,36 +30,26 @@ const workshops = [
     title: "Effective Lesson Planning",
     description: "Design lessons that engage diverse learners, accommodate different learning styles, and achieve educational objectives.",
   },
+  {
+    icon: Lightbulb,
+    title: "On the Same Page: Parent-Teacher Partnership That Works",
+    description: "Parents and teachers share the same goal but don't always share the same playbook. This session offers concrete strategies for building a true partnership — one where communication flows easily and the child feels the difference.",
+  },
 ]
 
 export function Workshops() {
-  const handleDownload = () => {
-    const link = document.createElement('a')
-    link.href = '/images/workshop-flyer.jpg'
-    link.download = 'Yocheved-Shapiro-Workshop-Offerings.jpg'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
 
   return (
     <section id="workshops" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-charcoal mb-4 text-balance">
             Workshop Offerings
           </h2>
           <p className="text-lg text-charcoal-light leading-relaxed mb-6">
             Professional development sessions designed to equip educators with practical, evidence-based strategies.
           </p>
-          <Button 
-            variant="outline" 
-            className="rounded-full border-olive text-olive hover:bg-olive-50"
-            onClick={handleDownload}
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download Workshop Flyer
-          </Button>
+          {/* workshop flyer download removed */}
         </div>
         <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
           {workshops.map((workshop, index) => (

@@ -55,8 +55,8 @@ export function Services() {
                 )}
                 {service.title === "Workshops" && (
                   <ul className="mt-4 text-sm text-charcoal-light space-y-1">
-                    <li>Via Zoom: <span className="font-semibold">$250</span></li>
-                    <li>In Person: <span className="font-semibold">$400</span></li>
+                    <li>Via Zoom: <span className="font-semibold">$600</span></li>
+                    <li>In Person: <span className="font-semibold">$800</span></li>
                     <li>For Schools: <span className="font-semibold">$550</span></li>
                   </ul>
                 )}
